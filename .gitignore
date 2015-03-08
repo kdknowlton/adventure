@@ -1,1 +1,3 @@
 node_modules/
+*.pyc
+story/static/javascript/bundle.js

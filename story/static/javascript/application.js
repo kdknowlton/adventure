@@ -1,9 +1,10 @@
 var $ = require('jquery');
-var Backone = require('backbone');
+var Backbone = require('backbone');
+Backbone.$ = $;
 var Marionette = require('backbone.marionette');
 
 var Rivets = require('rivets');
-require('rivets-backbone-adapter')
+require('rivets-backbone-adapter');
 Rivets.configure({});
 
 var MainLayoutView = require('./views/MainLayoutView');
@@ -16,7 +17,7 @@ StoryApp.addRegions({
 
 StoryApp.addInitializer(function (options){
 	var mainView = new MainLayoutView();
-	StoyApp.mainRegion.show(mainView);
+	StoryApp.mainRegion.show(mainView);
 });
 
 $(document).ready(function (){
