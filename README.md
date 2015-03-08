@@ -12,6 +12,6 @@ npm install
 
 ## Build Browserified JS:
 From story/static/javascript, run:
-'''
+```
 ../../../node_modules/browserify/bin/cmd.js application.js -t [jstify --engine lodash] > bundle.js
-'''
+```
