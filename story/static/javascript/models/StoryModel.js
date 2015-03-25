@@ -1,4 +1,13 @@
-var Backbone = require('Backbone');
-Backbone.$ = require('jquery');
+var Backbone = require('backbone');
+var Event = require('./EventModel');
 
-module.exports = Backbone.model.extend({});
+module.exports = Backbone.RelationalModel.extend({
+	urlRoot: '/story/api/stories/',
+	idAttribute: 'id',
+	relations: [{
+		type: Backbone.HasOne,
+		key: 'firstEvent',
+		relatedModel: Event,
+		includeInJSON: 'id',
+	}]
+});

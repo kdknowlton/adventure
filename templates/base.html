@@ -1,8 +1,11 @@
+{% load static %}
+
 <html>
 <head>
 <title>{% block title %}
 This page has no title
 {% endblock title %}</title>
+<link rel='stylesheet' type='text/css' href='{% static "css/main.css" %}'>
 </head>
 <body>
 {% block content %}
